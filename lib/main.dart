@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.cyan,
@@ -29,6 +30,20 @@ class Home extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.w700,
           ),
+        ),
+        actions: [
+          Icon(Icons.circle_notifications),
+          Icon(Icons.circle_notifications),
+        ],
+      ),
+      body: Container(
+        margin: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(20.0),
+        color: Colors.amber,
+        child: Icon(
+          Icons.headset_mic,
+          color: Colors.white,
+          size: 50.0,
         ),
       ),
     );
