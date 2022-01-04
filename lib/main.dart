@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
         title: Text(
           "Basics",
           style: TextStyle(
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w300,
           ),
         ),
         actions: [
@@ -36,16 +36,88 @@ class Home extends StatelessWidget {
           Icon(Icons.circle_notifications),
         ],
       ),
-      body: Container(
-        margin: EdgeInsets.all(10.0),
-        padding: EdgeInsets.all(20.0),
-        color: Colors.amber,
-        child: Icon(
-          Icons.headset_mic,
-          color: Colors.white,
-          size: 50.0,
+      body: Center(
+        child: Container(
+          height: 80,
+          width: double.infinity,
+          color: Colors.grey[200],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.phone,
+                    size: 30,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    "CALL",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.navigation,
+                    size: 30,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text("ROUTE",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.blue,
+                      )),
+                ],
+              ),
+              Cloumn1(),
+            ],
+          ),
         ),
       ),
+    );
+  }
+}
+
+class Cloumn1 extends StatelessWidget {
+  const Cloumn1({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.share,
+          size: 30,
+          color: Colors.blue,
+        ),
+        SizedBox(
+          height: 10.0,
+        ),
+        Text(
+          "SHARE",
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.blue,
+          ),
+        ),
+      ],
     );
   }
 }
